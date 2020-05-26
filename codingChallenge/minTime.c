@@ -8,9 +8,10 @@ int main()
 	for(i=0 ;i<n;i++)
 		scanf("%d",&arr[i]);
 	for(i=0;i<n-2;i++)
-		for(j=i+1;j<=i+2;j++)
-			if(arr[i]+arr[j] < min)
-				min=arr[i]+arr[j];
+		if(arr[i]+arr[i+1] < min)
+			min=arr[i]+arr[i+1];
+		if(arr[i]+arr[i+2] < min)
+                        min=arr[i]+arr[i+2];
 	printf("Min time is %d",min);
 
 	return 0;
